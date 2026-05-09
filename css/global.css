@@ -1,0 +1,19 @@
+:root {
+    --bg: #0d1117;
+    --glass: rgba(22, 27, 34, 0.5);
+    --text: #c9d1d9;
+    --dim: #8b949e;
+    --border: rgba(48, 54, 61, 0.7);
+    --blue: #00f0ff;
+    --yellow: #e3e15d;
+    --green: #7ee787;
+    --font: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border); 
+    }
