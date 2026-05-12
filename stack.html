@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack | Dev.Name</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar-view.css">
+    <link rel="stylesheet" href="css/stack.css">
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    <div class="nav-wrapper">
+        <a href="index.html" class="nav-item"><span>Lenfer</a>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="project.html" class="nav-item"><span>P</span>rojects</a>
+        <ul class="dropdown">
+            <li><a href="#"><span>W</span>eb Apps</a></li>
+            <li><a href="#"><span>S</span>cripts</a></li>
+            <li><a href="#"><span>U</span>tils</a></li>
+        </ul>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="another.html" class="nav-item"><span>A</span>nother</a>
+    </div>
+    <div class="social-dock">
+        <a href="github.html" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header>
+        <div class="hero-tag">// tech_stack.json</div>
+        <h1>~/stack<span class="blink" style="color:var(--blue)">_</span></h1>
+        <p>Technologies I work with daily, tools I reach for first, and things I'm currently exploring. Honest proficiency levels, no buzzword padding.</p>
+    </header>
+
+    <!-- Filter -->
+    <div class="filter-row">
+        <button class="f-btn active" data-filter="all">All</button>
+        <button class="f-btn" data-filter="frontend">Frontend</button>
+        <button class="f-btn" data-filter="backend">Backend</button>
+        <button class="f-btn" data-filter="database">Database</button>
+        <button class="f-btn" data-filter="devops">DevOps</button>
+        <button class="f-btn" data-filter="tools">Tools</button>
+        <button class="f-btn" data-filter="learning">Learning</button>
+    </div>
+
+    <!-- FRONTEND -->
+    <div class="stack-section" data-cat="frontend">
+        <div class="section-head"><span>//</span> frontend</div>
+        <div class="tech-grid">
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(241,224,90,.1);color:#f1e05a">JS</div>
+                    <div><div class="tech-name">JavaScript</div><div class="tech-sub">ES2023+</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">95%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:95%;background:linear-gradient(90deg,#f1e05a,rgba(241,224,90,.4))"></div></div>
+                </div>
+                <span class="tech-badge daily">● daily driver</span>
+            </div>
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(49,120,198,.15);color:#3178c6">TS</div>
+                    <div><div class="tech-name">TypeScript</div><div class="tech-sub">5.x strict</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">88%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:88%;background:linear-gradient(90deg,#3178c6,rgba(49,120,198,.4))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top" style="gap:10px">
+                    <div class="tech-icon" style="background:rgba(97,218,251,.1);color:#61dafb">Re</div>
+                    <div><div class="tech-name">React</div><div class="tech-sub">18 + Hooks</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">90%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:90%;background:linear-gradient(90deg,#61dafb,rgba(97,218,251,.4))"></div></div>
+                </div>
+                <span class="tech-badge daily">● daily driver</span>
+            </div>
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(0,0,0,.3);color:#fff">N</div>
+                    <div><div class="tech-name">Next.js</div><div class="tech-sub">App Router</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">82%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:82%;background:linear-gradient(90deg,#c9d1d9,rgba(201,209,217,.3))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(255,100,0,.1);color:#ff6314">Sv</div>
+                    <div><div class="tech-name">Svelte</div><div class="tech-sub">SvelteKit</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">60%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:60%;background:linear-gradient(90deg,#ff6314,rgba(255,99,20,.3))"></div></div>
+                </div>
+                <span class="tech-badge explore">● exploring</span>
+            </div>
+
+            <div class="tech-card" data-cats="frontend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(6,182,212,.1);color:#06b6d4">TW</div>
+                    <div><div class="tech-name">Tailwind</div><div class="tech-sub">CSS v3</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">92%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:92%;background:linear-gradient(90deg,#06b6d4,rgba(6,182,212,.3))"></div></div>
+                </div>
+                <span class="tech-badge daily">● daily driver</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="stack-section" data-cat="backend">
+        <div class="section-head"><span>//</span> backend</div>
+        <div class="tech-grid">
+
+            <div class="tech-card" data-cats="backend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(126,231,135,.1);color:#7ee787">No</div>
+                    <div><div class="tech-name">Node.js</div><div class="tech-sub">20 LTS</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">85%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:85%;background:linear-gradient(90deg,#7ee787,rgba(126,231,135,.3))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+            <div class="tech-card" data-cats="backend">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(53,114,165,.1);color:#3572A5">Py</div>
+                    <div><div class="tech-name">Python</div><div class="tech-sub">3.12</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">68%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:68%;background:linear-gradient(90deg,#3572A5,rgba(53,114,165,.3))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="stack-section" data-cat="database">
+        <div class="section-head"><span>//</span> databases</div>
+        <div class="tech-grid">
+
+            <div class="tech-card" data-cats="database">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(51,103,145,.15);color:#336791">Pg</div>
+                    <div><div class="tech-name">PostgreSQL</div><div class="tech-sub">16</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">82%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:82%;background:linear-gradient(90deg,#336791,rgba(51,103,145,.4))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+            <div class="tech-card" data-cats="database">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(71,162,72,.1);color:#47a248">Mo</div>
+                    <div><div class="tech-name">MongoDB</div><div class="tech-sub">7 Atlas</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">65%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:65%;background:linear-gradient(90deg,#47a248,rgba(71,162,72,.3))"></div></div>
+                </div>
+                <span class="tech-badge explore">● secondary</span>
+            </div>
+
+            <div class="tech-card" data-cats="database learning">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(0,240,255,.07);color:var(--blue)">Pr</div>
+                    <div><div class="tech-name">Prisma</div><div class="tech-sub">ORM</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">70%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:70%;background:linear-gradient(90deg,var(--blue),rgba(0,240,255,.3))"></div></div>
+                </div>
+                <span class="tech-badge primary">● primary</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DEVOPS -->
+    <div class="stack-section" data-cat="devops">
+        <div class="section-head"><span>//</span> devops & infrastructure</div>
+        <div class="tech-grid">
+
+            <div class="tech-card" data-cats="devops">
+                <div class="card-top">
+                    <div class="tech-icon" style="background:rgba(13,183,237,.1);color:#0db7ed">Dk</div>
+                    <div><div class="tech-name">Docker</div><div class="tech-sub">+ Compose</div></div>
+                </div>
+                <div class="level-wrap">
+                    <div class="level-label"><span>Proficiency</span><span class="lv-val">80%</span></div>
+                    <div class="level-bar"><div class="level-fill" style="width:80%;background:linear-gradient(90deg,#0db7ed,rgba(13,183,237,.3))"></div></div>
+                </div>
+                <span class="tech-badge daily">● daily driver</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="stack-section" data-cat="tools">
+        <div class="section-head"><span>//</span> tools & environment</div>
+        <div class="tools-grid">
+            <div class="tool-item"><div class="tool-dot" style="background:#0078d4"></div><div><div class="tool-name">VS Code</div><div class="tool-sub">Tokyo Night</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:var(--yellow)"></div><div><div class="tool-name">Zsh</div><div class="tool-sub">Oh My Zsh</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:var(--purple)"></div><div><div class="tool-name">Obsidian</div><div class="tool-sub">Second Brain</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:#ff7262"></div><div><div class="tool-name">Figma</div><div class="tool-sub">UI / Prototypes</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:var(--orange)"></div><div><div class="tool-name">Insomnia</div><div class="tool-sub">API testing</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:#f05033"></div><div><div class="tool-name">Git</div><div class="tool-sub">Conventional</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:var(--blue)"></div><div><div class="tool-name">TablePlus</div><div class="tool-sub">DB GUI</div></div></div>
+            <div class="tool-item"><div class="tool-dot" style="background:#4285f4"></div><div><div class="tool-name">Chrome</div><div class="tool-sub">DevTools</div></div></div>
+        </div>
+    </div>
+
+<!-- TIMELINE -->
+<div class="stack-section">
+    <div class="section-head"><span>//</span> learning path</div>
+    <div class="timeline">
+
+        <div class="tl-item">
+            <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="tl-body">
+                <div class="tl-year">2026 — now</div>
+                <div class="tl-title">Leveling Up Across the Stack</div>
+                <div class="tl-desc">Focused on mastering the full cycle: deeper systems knowledge, advanced patterns, and shipping polished products. Goal: be a fully self‑sufficient developer by 2027.</div>
+                <div class="tl-tags"><span class="tl-tag">Next.js</span><span class="tl-tag">System Design</span><span class="tl-tag">React.js</span><span class="tl-tag">Node.js</span></div>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="tl-body">
+                <div class="tl-year">2024 — 2025</div>
+                <div class="tl-title">First Production Experiences</div>
+                <div class="tl-desc">Built a full e‑commerce platform as a college coursework project: Next.js, React, Node.js, Prisma, PostgreSQL. Deepened Python skills and started thinking in systems.</div>
+                <div class="tl-tags"><span class="tl-tag">Next.js</span><span class="tl-tag">React</span><span class="tl-tag">Node.js</span><span class="tl-tag">Prisma</span><span class="tl-tag">PostgreSQL</span></div>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div class="tl-body">
+                <div class="tl-year">2022 — 2023</div>
+                <div class="tl-title">Getting Serious</div>
+                <div class="tl-desc">Enrolled in a software development college program. Found the initial curriculum too basic, so self‑taught HTML, CSS, and JavaScript to build real interfaces in parallel.</div>
+                <div class="tl-tags"><span class="tl-tag">HTML/CSS</span><span class="tl-tag">JavaScript</span><span class="tl-tag">Git</span></div>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div class="tl-body">
+                <div class="tl-year">2020 — 2021</div>
+                <div class="tl-title">First Steps into Code</div>
+                <div class="tl-desc">Discovered programming through a school Python class. Fell in love with building things — experimented with RPG games and learned C++ to create a 2D game from scratch.</div>
+                <div class="tl-tags"><span class="tl-tag">Python</span><span class="tl-tag">C++</span><span class="tl-tag">Game Dev</span></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<script>
+// Filter logic
+const btns = document.querySelectorAll('.f-btn');
+const sections = document.querySelectorAll('.stack-section[data-cat]');
+const cards = document.querySelectorAll('.tech-card[data-cats]');
+
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+
+        if(f === 'all'){
+            sections.forEach(s => s.removeAttribute('data-hidden'));
+            cards.forEach(c => c.removeAttribute('data-hidden'));
+            return;
+        }
+
+        if(f === 'tools'){
+            sections.forEach(s => {
+                s.dataset.cat === 'tools' ? s.removeAttribute('data-hidden') : s.setAttribute('data-hidden','');
+            });
+            return;
+        }
+
+        if(f === 'learning'){
+            sections.forEach(s => {
+                if(s.dataset.cat === 'tools'){ s.setAttribute('data-hidden',''); return; }
+                s.removeAttribute('data-hidden');
+            });
+            cards.forEach(c => {
+                const cats = c.dataset.cats||'';
+                cats.includes('learning') ? c.removeAttribute('data-hidden') : c.setAttribute('data-hidden','');
+            });
+            // Hide empty sections
+            sections.forEach(s => {
+                if(s.dataset.cat === 'tools') return;
+                const visible = s.querySelectorAll('.tech-card:not([data-hidden])');
+                if(!visible.length) s.setAttribute('data-hidden','');
+            });
+            return;
+        }
+
+        sections.forEach(s => {
+            s.dataset.cat === f ? s.removeAttribute('data-hidden') : s.setAttribute('data-hidden','');
+        });
+        cards.forEach(c => c.removeAttribute('data-hidden'));
+    });
+});
+
+// Animate progress bars on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if(e.isIntersecting){
+            e.target.querySelectorAll('.level-fill').forEach(bar => {
+                const w = bar.style.width;
+                bar.style.width = '0%';
+                requestAnimationFrame(() => { bar.style.width = w; });
+            });
+        }
+    });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.tech-grid').forEach(g => observer.observe(g));
+</script>
+
+</body>
+</html>
