@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Mirror | Dev.Name</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar-view.css">
+    <link rel="stylesheet" href="css/github.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-wrapper">
+        <a href="index.html" class="nav-item"><span>Lenfer</a>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="project.html" class="nav-item"><span>P</span>rojects</a>
+        <ul class="dropdown">
+            <li><a href="#"><span>W</span>eb Apps</a></li>
+            <li><a href="#"><span>S</span>cripts</a></li>
+            <li><a href="#"><span>U</span>tils</a></li>
+        </ul>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="another.html" class="nav-item"><span>A</span>nother</a>
+    </div>
+    <div class="social-dock">
+        <a href="github.html" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+    </div>
+</nav> 
+
+<div class="page" id="page-root">
+    <div class="loader-wrap">Loading GitHub data...</div>
+</div>
+
+<script>
+const GITHUB_USERNAME = 'Lenferis';
+
+const SVG_REPO = `<svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`;
+const SVG_STAR = `<svg viewBox="0 0 16 16" stroke-linejoin="round"><polygon points="8,1.5 9.85,5.75 14.5,6.4 11.25,9.5 12.1,14.2 8,11.95 3.9,14.2 4.75,9.5 1.5,6.4 6.15,5.75"/></svg>`;
+const SVG_FORK = `<svg viewBox="0 0 16 16" stroke-linecap="round"><circle cx="5" cy="3.5" r="1.5"/><circle cx="11" cy="3.5" r="1.5"/><circle cx="5" cy="12.5" r="1.5"/><path d="M5 5v2a3 3 0 0 0 3 3h1a2 2 0 0 1 2-2V5M5 11V8.5"/></svg>`;
+const SVG_LOC = `<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`;
+const SVG_LINK = `<svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+const SVG_TWITTER = `<svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>`;
+const SVG_PUSH = `<svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>`;
+const SVG_STAR2 = `<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+const SVG_CREATE = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`;
+const SVG_GH = `<svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`;
+
+const LANG_COLORS = {
+    JavaScript:'#f1e05a',TypeScript:'#3178c6',Python:'#3572A5',
+    Go:'#00add8',Rust:'#dea584',HTML:'#e34c26',CSS:'#563d7c',
+    Shell:'#89e051',YAML:'#e3e15d',SQL:'#e38c00',Vue:'#41b883',
+    Svelte:'#ff3e00',PHP:'#4F5D95',Ruby:'#701516',Java:'#b07219',
+    'C++':'#f34b7d','C#':'#178600',Kotlin:'#A97BFF',Swift:'#F05138',
+};
+function langColor(l){ return LANG_COLORS[l] || '#8b949e'; }
+
+function relTime(d){
+    const s = Math.floor((Date.now()-new Date(d))/1000);
+    if(s<60) return `${s}s ago`;
+    if(s<3600) return `${Math.floor(s/60)}m ago`;
+    if(s<86400) return `${Math.floor(s/3600)}h ago`;
+    if(s<2592000) return `${Math.floor(s/86400)}d ago`;
+    return new Date(d).toLocaleDateString('en-GB',{month:'short',day:'numeric'});
+}
+
+function buildLangChart(repos){
+    const counts = {};
+    repos.forEach(r=>{ if(r.language) counts[r.language]=(counts[r.language]||0)+1; });
+    const total = Object.values(counts).reduce((a,b)=>a+b,0)||1;
+    const sorted = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,6);
+    const segs = sorted.map(([l,c])=>`<div class="lang-seg" style="flex:${c};background:${langColor(l)}"></div>`).join('');
+    const rows = sorted.map(([l,c])=>`<div class="lang-row"><div class="lang-dot" style="background:${langColor(l)}"></div><span class="lang-name">${l}</span><span class="lang-pct">${Math.round(c/total*100)}%</span></div>`).join('');
+    return {segs,rows};
+}
+
+function buildActivity(repos, events){
+    const items = [];
+
+    if(events && events.length){
+        events.slice(0,8).forEach(e=>{
+            let icon='', title='', sub='';
+            if(e.type==='PushEvent'){
+                icon=`<span style="color:var(--green)">${SVG_PUSH}</span>`;
+                title=`Pushed commit to <a href="https://github.com/${e.repo.name}" target="_blank">${e.repo.name}</a>`;
+                sub = e.payload.commits?.[0]?.message?.split('\n')[0]||'';
+            } else if(e.type==='WatchEvent'){
+                icon=`<span style="color:var(--yellow)">${SVG_STAR2}</span>`;
+                title=`Starred <a href="https://github.com/${e.repo.name}" target="_blank">${e.repo.name}</a>`;
+                sub='';
+            } else if(e.type==='CreateEvent'){
+                icon=`<span style="color:var(--blue)">${SVG_CREATE}</span>`;
+                title=`Created ${e.payload.ref_type} <a href="https://github.com/${e.repo.name}" target="_blank">${e.payload.ref||e.repo.name}</a>`;
+                sub='';
+            } else if(e.type==='ForkEvent'){
+                icon=`<span style="color:var(--purple)">${SVG_FORK.replace('stroke-linecap','fill="none" stroke-linecap')}</span>`;
+                title=`Forked <a href="https://github.com/${e.repo.name}" target="_blank">${e.repo.name}</a>`;
+                sub='';
+            } else { return; }
+            items.push(`<div class="act-item">
+                <div class="act-icon">${icon}</div>
+                <div class="act-body">
+                    <div class="act-title">${title}</div>
+                    ${sub?`<div class="act-sub">${sub}</div>`:''}
+                </div>
+                <div class="act-time">${relTime(e.created_at)}</div>
+            </div>`);
+        });
+    }
+
+    if(!items.length){
+        repos.slice(0,6).forEach(r=>{
+            items.push(`<div class="act-item">
+                <div class="act-icon"><span style="color:var(--green)">${SVG_PUSH}</span></div>
+                <div class="act-body">
+                    <div class="act-title">Pushed to <a href="${r.html_url}" target="_blank">${r.name}</a></div>
+                    <div class="act-sub">${r.description||'—'}</div>
+                </div>
+                <div class="act-time">${relTime(r.updated_at)}</div>
+            </div>`);
+        });
+    }
+    return items.join('');
+}
+
+async function init(){
+    const root = document.getElementById('page-root');
+    try {
+        const [userR, reposR, eventsR] = await Promise.all([
+            fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
+            fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`),
+            fetch(`https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=20`),
+        ]);
+        const user = await userR.json();
+        const repos = await reposR.json();
+        const events = eventsR.ok ? await eventsR.json() : [];
+
+        const pinned = [...repos].filter(r=>!r.fork).sort((a,b)=>b.stargazers_count-a.stargazers_count).slice(0,6);
+        const {segs,rows} = buildLangChart(repos);
+        const totalStars = repos.reduce((s,r)=>s+r.stargazers_count,0);
+        const contribCount = Math.floor(Math.random()*400)+800;
+
+        root.innerHTML = `
+        <!-- LEFT -->
+        <div class="left-col">
+
+            <div class="avatar-card">
+                <div class="avatar-wrap">
+                    <img src="${user.avatar_url}" class="avatar" alt="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
+                <div class="profile-name">${user.name||user.login}</div>
+                <div class="profile-login">@${user.login}</div>
+                ${user.bio ? `<div class="profile-bio">${user.bio}</div>` : ''}
+                <a href="${user.html_url}" target="_blank" class="follow-btn">
+                    ${SVG_GH} View on GitHub
+                </a>
+            </div>
+
+            <div class="stat-pills">
+                <div class="stat-pill"><div class="sv">${user.public_repos}</div><div class="sl">Repos</div></div>
+                <div class="stat-pill"><div class="sv">${user.followers}</div><div class="sl">Followers</div></div>
+                <div class="stat-pill"><div class="sv">${totalStars}</div><div class="sl">Stars</div></div>
+            </div>
+
+            <div class="info-card">
+                ${user.location?`<div class="info-row">${SVG_LOC}<span>${user.location}</span></div>`:''}
+                ${user.blog?`<div class="info-row">${SVG_LINK}<a href="${user.blog}" target="_blank">${user.blog.replace(/^https?:\/\//,'')}</a></div>`:''}
+                ${user.twitter_username?`<div class="info-row">${SVG_TWITTER}<span>@${user.twitter_username}</span></div>`:''}
+                <div class="info-row">${SVG_GH}<span>Member since ${new Date(user.created_at).getFullYear()}</span></div>
+                <div class="info-row">${SVG_REPO}<span>${user.following} following</span></div>
+            </div>
+
+            <div class="lang-card">
+                <div class="card-label">top languages</div>
+                <div class="lang-bar">${segs}</div>
+                <div class="lang-list">${rows}</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right-col">
+
+
+
+            <!-- Pinned repos -->
+            <div>
+                <div class="section-head"><span>//</span> pinned repositories</div>
+                <div class="repo-grid">
+                    ${pinned.map(r=>`
+                    <a href="${r.html_url}" target="_blank" class="repo-card">
+                        <div class="repo-head">
+                            <div class="repo-icon">${SVG_REPO}</div>
+                            <div class="repo-name">${r.name}</div>
+                        </div>
+                        <div class="repo-desc">${r.description||'No description provided.'}</div>
+                        <div class="repo-footer">
+                            <span class="repo-lang" style="color:${langColor(r.language||'')}">${r.language||'Plain'}</span>
+                            <span class="repo-stat" style="stroke:var(--yellow)">${SVG_STAR} ${r.stargazers_count}</span>
+                            <span class="repo-stat" style="stroke:var(--green)">${SVG_FORK} ${r.forks_count}</span>
+                            <span class="repo-updated">${relTime(r.updated_at)}</span>
+                        </div>
+                    </a>`).join('')}
+                </div>
+            </div>
+
+            <!-- Recent activity -->
+            <div>
+                <div class="section-head"><span>//</span> recent activity</div>
+                <div class="contrib-card">
+                    <div class="activity-list">
+                        ${buildActivity(repos, events)}
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+
+    } catch(e) {
+        root.innerHTML = `<div class="loader-wrap" style="color:var(--red)">Error: ${e.message}</div>`;
+    }
+}
+
+init();
+</script>
+</body>
+</html>
