@@ -26,3 +26,10 @@ footer {
     font-size: 0.75rem;
     border-top: 1px solid var(--border); 
     }
+
+/* ── Blobs ── */
+.bg-scene { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.blob { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.1; animation: drift 22s ease-in-out infinite alternate; }
+.blob:nth-child(1) { width: 550px; height: 550px; background: #00f0ff; top: -200px; left: -100px; animation-duration: 20s; }
+.blob:nth-child(2) { width: 420px; height: 420px; background: #7ee787; bottom: -100px; right: -100px; animation-duration: 28s; animation-delay: -9s; }
+.blob:nth-child(3) { width: 280px; height: 280px; background: #e3e15d; top: 40%; left: 50%; opacity: 0.06; animation-duration: 24s; animation-delay: -5s; }

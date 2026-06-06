@@ -1,0 +1,17 @@
+{
+  "articles": [
+
+  ],
+  "notes": [
+    {
+      "id": "dev-notes",
+      "name": "dev_notes.md",
+      "ext": "md",
+      "color": "#7ee787",
+      "title": "Заметки разработчика",
+      "date": "20.02.2026",
+      "tags": ["Notes"],
+      "path": "content/notes/dev_notes.md.md"
+    }
+  ]
+}
