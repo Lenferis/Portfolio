@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Lenfer</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar-view.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+</head>
+<body>
+
+<div class="bg-scene">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+</div>
+
+<nav class="navbar">
+    <div class="nav-wrapper">
+        <a href="index.html" class="nav-item"><span>Lenfer</span></a>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="project.html" class="nav-item"><span>P</span>rojects</a>
+        <ul class="dropdown">
+            <li><a href="#"><span>W</span>eb Apps</a></li>
+            <li><a href="#"><span>S</span>cripts</a></li>
+            <li><a href="#"><span>U</span>tils</a></li>
+        </ul>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="another.html" class="nav-item"><span>A</span>nother</a>
+    </div>
+    <div class="social-dock">
+        <a href="https://github.com/Lenferis" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@regards8247" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <div class="status-tag">
+            <div class="pulse"></div>
+            available for work
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header>
+        <div class="hero-tag">// contact.md</div>
+        <h1>~/contact<span class="blink" style="color:var(--blue)">_</span></h1>
+        <p>Got a project idea, a collaboration proposal, or just want to say hello? Reach out — I read every message.</p>
+    </header>
+
+    <div class="contact-grid">
+
+        <!-- ── Form ── -->
+        <div class="form-card">
+            <div class="form-title"><span>//</span> send_message</div>
+
+            <div class="form-row">
+                <label><span>//</span> name</label>
+                <input class="form-input" type="text" id="f-name" placeholder="kirill Velichko" autocomplete="off">
+            </div>
+
+            <div class="form-row">
+                <label><span>//</span> email</label>
+                <input class="form-input" type="email" id="f-email" placeholder="you@gmail.com" autocomplete="off">
+            </div>
+
+            <div class="form-row">
+                <label><span>//</span> subject</label>
+                <div class="chip-row" id="chips">
+                    <button class="chip" data-val="Collaboration">Collaboration</button>
+                    <button class="chip" data-val="Job Offer">Job Offer</button>
+                    <button class="chip" data-val="Open Source">Open Source</button>
+                    <button class="chip" data-val="Just Saying Hi">Just Saying Hi</button>
+                    <button class="chip" data-val="Other">Other</button>
+                </div>
+                <input class="form-input" type="text" id="f-subject" placeholder="Or type a custom subject..." style="margin-top:10px">
+            </div>
+
+            <div class="form-row">
+                <label><span>//</span> message</label>
+                <textarea class="form-textarea" id="f-message" placeholder="Tell me about your project or idea..."></textarea>
+            </div>
+
+            <div class="form-submit">
+                <button class="btn-send" id="send-btn" onclick="handleSend()">
+                    <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    Send Message
+                </button>
+                <span class="form-hint">// no spam, ever</span>
+            </div>
+
+            <div class="success-msg" id="success-msg">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Message sent! I'll get back to you within 24–48h.
+            </div>
+        </div>
+
+        <div class="right-col">
+
+            <div class="info-card">
+                <div class="card-head"><span>//</span> reach_me_at</div>
+
+                <a href="mailto:kirillvelicka0@gmail.com" class="contact-link">
+                    <div class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="link-body">
+                        <div class="link-label">Email</div>
+                        <div class="link-value">kirillvelicka0@gmail.com</div>
+                    </div>
+                    <div class="link-arrow">→</div>
+                </a>
+
+                <a href="https://github.com/Lenferis" target="_blank" class="contact-link">
+                    <div class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
+                    <div class="link-body">
+                        <div class="link-label">GitHub</div>
+                        <div class="link-value">@Lenferis</div>
+                    </div>
+                    <div class="link-arrow">→</div>
+                </a>
+
+                <a href="https://www.youtube.com/@regards8247" class="contact-link">
+                    <div class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+                    </div>
+                    <div class="link-body">
+                        <div class="link-label">YouTube</div>
+                        <div class="link-value">@regards8247(lol)</div>
+                    </div>
+                    <div class="link-arrow">→</div>
+                </a>
+
+                <a href="https://t.me/lenfer31" target="_blank" class="contact-link">
+                    <div class="link-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </div>
+                    <div class="link-body">
+                        <div class="link-label">Telegram</div>
+                        <div class="link-value">@lenfer31</div>
+                    </div>
+                    <div class="link-arrow">→</div>
+                </a>
+            </div>
+
+            <div class="status-card">
+                <div class="card-head"><span>//</span> availability</div>
+                <div class="status-row">
+                    <div class="status-dot green"></div>
+                    <span>Open to work</span>
+                    <span class="status-label">active</span>
+                </div>
+                <div class="status-row">
+                    <div class="status-dot green"></div>
+                    <span>Freelance projects</span>
+                    <span class="status-label">active</span>
+                </div>
+                <div class="status-row">
+                    <div class="status-dot yellow"></div>
+                    <span>Full-time position</span>
+                    <span class="status-label">considering</span>
+                </div>
+                <div class="status-row">
+                    <div class="status-dot green"></div>
+                    <span>Open source collab</span>
+                    <span class="status-label">always</span>
+                </div>
+            </div>
+
+            <div class="time-card">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>Typical response time: <strong>within 24–48h</strong></div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <code>// Compiled by Lenfer 2026</code>
+    </footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+        const wasActive = chip.classList.contains('active');
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        if (!wasActive) {
+            chip.classList.add('active');
+            document.getElementById('f-subject').value = chip.dataset.val;
+        } else {
+            document.getElementById('f-subject').value = '';
+        }
+    });
+});
+
+document.getElementById('f-subject').addEventListener('input', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+});
+
+function handleSend() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const subject = document.getElementById('f-subject').value.trim();
+    const msg = document.getElementById('f-message').value.trim();
+
+    if (!name || !email || !msg) {
+        [['f-name', name], ['f-email', email], ['f-message', msg]].forEach(([id, val]) => {
+            if (!val) {
+                const el = document.getElementById(id);
+                el.style.borderColor = 'rgba(255,123,114,0.6)';
+                el.style.boxShadow = '0 0 0 3px rgba(255,123,114,0.08)';
+                setTimeout(() => {
+                    el.style.borderColor = '';
+                    el.style.boxShadow = '';
+                }, 1800);
+            }
+        });
+        return;
+    }
+
+    const body = `From: ${name} (${email})\n\n${msg}`;
+    const mailtoLink = `mailto:kirillvelicka0@gmail.com?subject=${encodeURIComponent(subject || 'Message from portfolio')}&body=${encodeURIComponent(body)}`;
+
+    const btn = document.getElementById('send-btn');
+    btn.classList.add('loading');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Opening mail client...`;
+
+    setTimeout(() => {
+        window.location.href = mailtoLink;
+
+        btn.style.display = 'none';
+        document.querySelector('.form-hint').style.display = 'none';
+        const success = document.getElementById('success-msg');
+        success.classList.add('show');
+
+        ['f-name','f-email','f-subject','f-message'].forEach(id => {
+            document.getElementById(id).value = '';
+        });
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    }, 800);
+}
+</script>
+</body>
+</html>
