@@ -110,37 +110,8 @@ body {
   border-color: rgba(0, 240, 255, 0.3);
   background: rgba(0, 240, 255, 0.04);
 }
-.status-tag {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.72rem;
-  color: var(--dim);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 3px 10px;
-  margin-left: 16px;
-  white-space: nowrap;
-}
-.pulse {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 6px var(--green);
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.8);
-  }
-}
+
+
 @media (max-width: 440px) {
   .social-dock {
     display: none;

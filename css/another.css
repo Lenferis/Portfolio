@@ -677,9 +677,6 @@ body {
   .nav-sep {
     display: none;
   }
-  .nav-wrapper:not(:first-child) {
-    display: none;
-  }
   
 
   .drawer-overlay {
