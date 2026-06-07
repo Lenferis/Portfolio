@@ -23,11 +23,6 @@
     <span class="nav-sep">|</span>
     <div class="nav-wrapper">
         <a href="project.html" class="nav-item"><span>P</span>rojects</a>
-        <ul class="dropdown">
-            <li><a href="#"><span>W</span>eb Apps</a></li>
-            <li><a href="#"><span>S</span>cripts</a></li>
-            <li><a href="#"><span>U</span>tils</a></li>
-        </ul>
     </div>
     <span class="nav-sep">|</span>
     <div class="nav-wrapper">
@@ -47,14 +42,16 @@
 </nav>
 
 <div class="container">
-
+    <a href="index.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="12" height="12"><path d="M10 12L6 8l4-4"/></svg>
+        root / main_page
+    </a>
     <header>
         <div class="hero-tag">// tech_stack.json</div>
         <h1>~/stack<span class="blink" style="color:var(--blue)">_</span></h1>
         <p>Technologies I work with daily, tools I reach for first, and things I'm currently exploring. Honest proficiency levels, no buzzword padding.</p>
     </header>
 
-    <!-- Filter -->
     <div class="filter-row">
         <button class="f-btn active" data-filter="all">All</button>
         <button class="f-btn" data-filter="frontend">Frontend</button>
@@ -65,7 +62,6 @@
         <button class="f-btn" data-filter="learning">Learning</button>
     </div>
 
-    <!-- FRONTEND -->
     <div class="stack-section" data-cat="frontend">
         <div class="section-head"><span>//</span> frontend</div>
         <div class="tech-grid">
@@ -120,18 +116,6 @@
 
             <div class="tech-card" data-cats="frontend">
                 <div class="card-top">
-                    <div class="tech-icon" style="background:rgba(255,100,0,.1);color:#ff6314">Sv</div>
-                    <div><div class="tech-name">Svelte</div><div class="tech-sub">SvelteKit</div></div>
-                </div>
-                <div class="level-wrap">
-                    <div class="level-label"><span>Proficiency</span><span class="lv-val">60%</span></div>
-                    <div class="level-bar"><div class="level-fill" style="width:60%;background:linear-gradient(90deg,#ff6314,rgba(255,99,20,.3))"></div></div>
-                </div>
-                <span class="tech-badge explore">● exploring</span>
-            </div>
-
-            <div class="tech-card" data-cats="frontend">
-                <div class="card-top">
                     <div class="tech-icon" style="background:rgba(6,182,212,.1);color:#06b6d4">TW</div>
                     <div><div class="tech-name">Tailwind</div><div class="tech-sub">CSS v3</div></div>
                 </div>
@@ -145,7 +129,6 @@
         </div>
     </div>
 
-    <!-- BACKEND -->
     <div class="stack-section" data-cat="backend">
         <div class="section-head"><span>//</span> backend</div>
         <div class="tech-grid">

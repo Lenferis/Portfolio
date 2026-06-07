@@ -101,18 +101,6 @@
   border-color: rgba(0, 240, 255, 0.3);
   background: rgba(0, 240, 255, 0.04);
 }
-.status-tag {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.72rem;
-  color: var(--dim);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 3px 10px;
-  margin-left: 16px;
-  white-space: nowrap;
-}
 
 @media (max-width: 440px) {
   .social-dock {

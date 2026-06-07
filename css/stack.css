@@ -14,7 +14,19 @@ body {
   margin: 0 auto;
   padding: 48px 22px 80px;
 }
-
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-size: 0.72rem;
+  color: var(--dim);
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--blue);
+}
 header {
   margin-bottom: 48px;
 }

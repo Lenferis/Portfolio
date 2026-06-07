@@ -680,9 +680,7 @@ body {
   .nav-wrapper:not(:first-child) {
     display: none;
   }
-  .status-tag {
-    display: none;
-  }
+  
 
   .drawer-overlay {
     display: block;

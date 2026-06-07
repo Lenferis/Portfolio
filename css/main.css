@@ -512,7 +512,5 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .status-tag {
-    display: none;
-  }
+
 }
