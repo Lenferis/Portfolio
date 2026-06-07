@@ -10,7 +10,11 @@
 </head>
 <body>
 
-
+<div class="bg-scene">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+</div>
 
 <nav class="navbar">
     <div class="nav-wrapper">
@@ -359,7 +363,6 @@ btns.forEach(btn => {
     });
 });
 
-// Animate progress bars on scroll
 const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
         if(e.isIntersecting){

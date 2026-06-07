@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Lenfer</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar-view.css">
+    <link rel="stylesheet" href="css/project.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div class="bg-scene">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="modal-title">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span id="m-title">project</span>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal()">[ ✕ close ]</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-left" id="m-left"></div>
+            <div class="modal-right" id="m-right"></div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="nav-wrapper">
+        <a href="index.html" class="nav-item"><span>Lenfer</span></a>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="project.html" class="nav-item"><span>P</span>rojects</a>
+        <ul class="dropdown">
+            <li><a href="#"><span>W</span>eb Apps</a></li>
+            <li><a href="#"><span>S</span>cripts</a></li>
+            <li><a href="#"><span>U</span>tils</a></li>
+        </ul>
+    </div>
+    <span class="nav-sep">|</span>
+    <div class="nav-wrapper">
+        <a href="another.html" class="nav-item"><span>A</span>nother</a>
+    </div>
+    <div class="social-dock">
+        <a href="github.html" class="social-link" title="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="social-link" title="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <div class="status-tag">
+            <div class="pulse"></div>
+            available for work
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <a href="index.html" class="back-link">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="12" height="12"><path d="M10 12L6 8l4-4"/></svg>
+        root / main_page
+    </a>
+
+    <header>
+        <div class="hero-tag">// projects.json</div>
+        <h1>~/projects<span class="blink" style="color:var(--blue)">_</span></h1>
+        <p>A curated selection of things I've built and shipped — from full-stack apps to scripts and experiments. Click any card to dig deeper.</p>
+    </header>
+
+    <div class="tab-row">
+        <button class="tab-btn active" onclick="switchTab('featured', this)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" width="13" height="13"><polygon points="8,1.5 9.85,5.75 14.5,6.4 11.25,9.5 12.1,14.2 8,11.95 3.9,14.2 4.75,9.5 1.5,6.4 6.15,5.75"/></svg>
+            Featured
+            <span class="tab-count" id="featured-count">—</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('lab', this)">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" width="13" height="13"><polyline points="8 6 2 12 8 18" transform="scale(0.8) translate(1,0)"/><polyline points="14 6 8 12 14 18" transform="scale(0.8) translate(1,0)"/></svg>
+            Lab
+            <span class="tab-count grey" id="lab-count">—</span>
+        </button>
+        <div class="tab-sep"></div>
+        <button class="tab-view-btn" onclick="toggleView()" id="view-btn">
+            <svg viewBox="0 0 16 16"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+            Grid
+        </button>
+    </div>
+
+    <div class="filter-bar" id="filter-bar">
+        <span class="filter-prefix">filter:</span>
+        <input class="search-input" id="f-search" type="text" placeholder="search by name or keyword..." oninput="applyFilters()">
+        <select class="filter-select" id="f-type" onchange="applyFilters()">
+            <option value="">type: all</option>
+            <option value="web">web</option>
+            <option value="script">script</option>
+            <option value="util">util</option>
+            <option value="bot">bot</option>
+        </select>
+        <select class="filter-select" id="f-lang" onchange="applyFilters()"><option value="">lang: all</option></select>
+        <select class="filter-select" id="f-sort" onchange="applyFilters()">
+            <option value="featured">sort: featured</option>
+            <option value="stars">sort: stars ★</option>
+            <option value="name">sort: name A–Z</option>
+            <option value="updated">sort: recent</option>
+        </select>
+    </div>
+
+    <div class="results-bar">
+        <div>showing: <span id="showing-count">0</span> projects</div>
+    </div>
+
+    <div id="project-area"></div>
+
+    <footer><code>// [SYSTEM] Directory listing complete. Status: 200 OK</code></footer>
+</div>
+
+<script>
+const GITHUB_USERNAME = 'Lenferis';
+
+let featuredProjects = [];
+
+
+const TYPE_ICONS = {
+    web: `<svg viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+    script: `<svg viewBox="0 0 24 24" fill="none" stroke="#e3e15d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+    util: `<svg viewBox="0 0 24 24" fill="none" stroke="#7ee787" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>`,
+    bot: `<svg viewBox="0 0 24 24" fill="none" stroke="#c9d1d9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="9" cy="16" r="1" fill="#c9d1d9" stroke="none"/><circle cx="15" cy="16" r="1" fill="#c9d1d9" stroke="none"/></svg>`,
+};
+const TYPE_ICON_BG = { web:'rgba(0,240,255,0.08)', script:'rgba(227,225,93,0.08)', util:'rgba(126,231,135,0.08)', bot:'rgba(201,209,217,0.06)' };
+const LANG_COLORS = { JavaScript:'#f1e05a', TypeScript:'#3178c6', Python:'#3572A5', Go:'#00add8', HTML:'#e34c26', CSS:'#563d7c', 'C++':'#f34b7d', Vue:'#41b883', Rust:'#dea584' };
+function langColor(l){ return LANG_COLORS[l]||'#8b949e'; }
+
+const SVG_STAR = `<svg viewBox="0 0 16 16" fill="none" stroke="#e3e15d" stroke-width="1.4" stroke-linejoin="round"><polygon points="8,1.5 9.85,5.75 14.5,6.4 11.25,9.5 12.1,14.2 8,11.95 3.9,14.2 4.75,9.5 1.5,6.4 6.15,5.75"/></svg>`;
+const SVG_FORK = `<svg viewBox="0 0 16 16" fill="none" stroke="#7ee787" stroke-width="1.4" stroke-linecap="round"><circle cx="5" cy="3.5" r="1.5"/><circle cx="11" cy="3.5" r="1.5"/><circle cx="5" cy="12.5" r="1.5"/><path d="M5 5v2a3 3 0 0 0 3 3h1a2 2 0 0 1 2-2V5M5 11V8"/></svg>`;
+const SVG_GH = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>`;
+const SVG_LINK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`;
+const SVG_CAL = `<svg viewBox="0 0 14 14" fill="none" stroke="#8b949e" stroke-width="1.3" stroke-linecap="round"><rect x="1" y="2.5" width="12" height="10" rx="1.5"/><path d="M4 1v2M10 1v2M1 6h12"/></svg>`;
+const SVG_LOCK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+
+function relTime(d) {
+    const s = Math.floor((Date.now()-new Date(d))/1000);
+    if(s<60) return `${s}s ago`;
+    if(s<3600) return `${Math.floor(s/60)}m ago`;
+    if(s<86400) return `${Math.floor(s/3600)}h ago`;
+    if(s<2592000) return `${Math.floor(s/86400)}d ago`;
+    return new Date(d).toLocaleDateString('en-GB',{month:'short',day:'numeric',year:'numeric'});
+}
+async function loadFeaturedProjects() {
+    try {
+        const res = await fetch('content/projects.json');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        featuredProjects = await res.json();
+        document.getElementById('featured-count').textContent = featuredProjects.length;
+        renderCurrentTab();
+    } catch (e) {
+        console.error('Failed to load featured projects:', e);
+        document.getElementById('project-area').innerHTML = 
+            `<div class="loader-msg" style="color:var(--red)">Could not load projects data.</div>`;
+        document.getElementById('featured-count').textContent = '0';
+    }
+}
+let currentTab = 'featured';
+let isGrid = true;
+let labRepos = [];
+let labLoaded = false;
+let currentProject = null;
+
+const NOTES_KEY = 'devprojects_notes_v1';
+function getNotes(){ try{ return JSON.parse(localStorage.getItem(NOTES_KEY)||'{}'); }catch{ return {}; } }
+function saveNote(id, text){ const n=getNotes(); n[id]=text; localStorage.setItem(NOTES_KEY,JSON.stringify(n)); }
+
+
+function switchTab(tab, btn) {
+    currentTab = tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.getElementById('f-search').value = '';
+    document.getElementById('f-type').value = '';
+    if(document.getElementById('f-lang')) document.getElementById('f-lang').value = '';
+    document.getElementById('f-sort').value = tab === 'featured' ? 'featured' : 'updated';
+
+    if(tab === 'lab' && !labLoaded) {
+        loadLabRepos();
+    } else {
+        renderCurrentTab();
+    }
+}
+
+
+function toggleView() {
+    isGrid = !isGrid;
+    const btn = document.getElementById('view-btn');
+    btn.innerHTML = isGrid
+        ? `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" width="13" height="13"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg> Grid`
+        : `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" width="13" height="13"><line x1="2" y1="4" x2="14" y2="4"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="12" x2="14" y2="12"/></svg> List`;
+    applyFilters();
+}
+
+
+function initFeatured() {
+    loadFeaturedProjects();
+}
+
+function applyFilters() {
+    renderCurrentTab();
+}
+
+function getFilteredFeatured() {
+    const q = document.getElementById('f-search').value.toLowerCase();
+    const type = document.getElementById('f-type').value;
+    const lang = document.getElementById('f-lang').value;
+    const sort = document.getElementById('f-sort').value;
+
+    let list = featuredProjects.filter(p => {
+        if(q && !p.name.toLowerCase().includes(q) && !p.desc.toLowerCase().includes(q) && !p.tech.join(' ').toLowerCase().includes(q)) return false;
+        if(type && p.type !== type) return false;
+        if(lang && !p.tech.includes(lang)) return false;
+        return true;
+    });
+
+    if(sort==='stars') list.sort((a,b)=>(b.stars||0)-(a.stars||0));
+    else if(sort==='name') list.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(sort==='updated') list.sort((a,b)=>b.year-a.year);
+    return list;
+}
+
+function getFilteredLab() {
+    const q = document.getElementById('f-search').value.toLowerCase();
+    const type = document.getElementById('f-type').value;
+    const lang = document.getElementById('f-lang').value;
+    const sort = document.getElementById('f-sort').value;
+
+    let list = labRepos.filter(p => {
+        if(q && !p.name.toLowerCase().includes(q) && !(p.desc||'').toLowerCase().includes(q)) return false;
+        if(type && p.type !== type) return false;
+        if(lang && p.lang !== lang) return false;
+        return true;
+    });
+
+    if(sort==='stars') list.sort((a,b)=>b.stars-a.stars);
+    else if(sort==='forks') list.sort((a,b)=>b.forks-a.forks);
+    else if(sort==='name') list.sort((a,b)=>a.name.localeCompare(b.name));
+    else list.sort((a,b)=>new Date(b.updated)-new Date(a.updated));
+    return list;
+}
+
+function renderCurrentTab() {
+    const area = document.getElementById('project-area');
+    area.innerHTML = '';
+
+    if(currentTab === 'featured') {
+        const list = getFilteredFeatured();
+        document.getElementById('showing-count').textContent = list.length;
+        if(!list.length){ area.innerHTML=`<div class="no-results">No projects match your filter.</div>`; return; }
+        isGrid ? renderFeaturedGrid(list, area) : renderFeaturedList(list, area);
+    } else {
+        const list = getFilteredLab();
+        document.getElementById('showing-count').textContent = list.length;
+        const labNote = document.createElement('div');
+        labNote.className = 'lab-info';
+        labNote.innerHTML = `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>These are all my public GitHub repositories — experiments, learning projects, and utilities. Not all of them are production-ready. For the good stuff, check out the <strong style="color:var(--text)">Featured</strong> tab.</div>`;
+        area.appendChild(labNote);
+        if(!list.length){ area.innerHTML+=`<div class="no-results">No repos match your filter.</div>`; return; }
+        isGrid ? renderLabGrid(list, area) : renderLabList(list, area);
+    }
+}
+
+function renderFeaturedGrid(list, area) {
+    const grid = document.createElement('div');
+    grid.className = 'project-grid';
+    list.forEach((p, i) => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.style.animationDelay = `${i * 0.05}s`;
+        const techTags = p.tech.slice(0,4).map(t=>`<span class="tech-tag" style="color:${langColor(t)};border-color:${langColor(t)}22">${t}</span>`).join('');
+        card.innerHTML = `
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:20px;">
+                ${p.featured ? '<div class="featured-badge" style="position:static;margin:0">★ featured</div>' : '<div></div>'}
+                ${p.privateCode ? `<span style="font-size:0.62rem;color:var(--dim);display:inline-flex;align-items:center;gap:3px;border:1px solid rgba(139,148,158,0.2);border-radius:20px;padding:1px 7px;white-space:nowrap"><svg viewBox="0 0 24 24" width="9" height="9" fill="none" stroke="#8b949e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> private</span>` : ''}
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:4px;">
+                <div class="card-type-icon" style="background:${TYPE_ICON_BG[p.type]||'rgba(139,148,158,0.06)'}">
+                    ${TYPE_ICONS[p.type]||TYPE_ICONS.util}
+                </div>
+            </div>
+            <div class="card-name">${p.name}</div>
+            <div class="card-desc">${p.desc}</div>
+            <div class="card-tech">${techTags}</div>
+            <div class="card-footer">
+                <span style="font-size:0.66rem;color:var(--dim);background:rgba(33,38,45,0.6);border:1px solid var(--border);border-radius:4px;padding:1px 7px">${p.year}</span>
+                <span style="font-size:0.66rem;color:var(--dim)">${p.type}</span>
+                <span class="card-open-btn">open →</span>
+            </div>`;
+        card.onclick = () => openFeaturedModal(p);
+        grid.appendChild(card);
+    });
+    area.appendChild(grid);
+}
+
+function renderFeaturedList(list, area) {
+    const wrap = document.createElement('div');
+    wrap.className = 'project-list';
+    const header = document.createElement('div');
+    header.className = 'list-header';
+    header.innerHTML = `<div></div><div>Name</div><div>Description</div><div>Tech</div><div>Type</div><div>Year</div>`;
+    wrap.appendChild(header);
+    list.forEach(p => {
+        const row = document.createElement('div');
+        row.className = 'list-row';
+        const firstLang = p.tech[0] || '';
+        row.innerHTML = `
+            <div class="row-icon" style="opacity:0.7">${TYPE_ICONS[p.type]||TYPE_ICONS.util}</div>
+            <div class="row-name">${p.name}${p.privateCode?` <span style="font-size:0.58rem;opacity:0.5">🔒</span>`:''}</div>
+            <div class="row-desc">${p.desc}</div>
+            <div class="row-lang" style="color:${langColor(firstLang)}">${firstLang}</div>
+            <div style="font-size:0.68rem;color:var(--dim)">${p.type}</div>
+            <div class="row-year">${p.year}</div>`;
+        row.onclick = () => openFeaturedModal(p);
+        wrap.appendChild(row);
+    });
+    area.appendChild(wrap);
+}
+
+function renderLabGrid(list, area) {
+    const grid = document.createElement('div');
+    grid.className = 'project-grid';
+    list.forEach((p, i) => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.style.animationDelay = `${i * 0.03}s`;
+        card.innerHTML = `
+            <div style="display:flex;align-items:center;gap:10px;">
+                <div class="card-type-icon" style="background:${TYPE_ICON_BG[p.type]||'rgba(139,148,158,0.06)'}">
+                    ${TYPE_ICONS[p.type]||TYPE_ICONS.util}
+                </div>
+            </div>
+            <div class="card-name">${p.name}</div>
+            <div class="card-desc">${p.desc||'No description.'}</div>
+            <div class="card-footer">
+                <span class="card-stat" style="color:${langColor(p.lang)}">${p.lang}</span>
+                <span class="card-stat" style="color:var(--yellow)">${SVG_STAR}&nbsp;${p.stars}</span>
+                <span class="card-stat" style="color:var(--green)">${SVG_FORK}&nbsp;${p.forks}</span>
+                <span class="card-open-btn">open →</span>
+            </div>`;
+        card.onclick = () => openLabModal(p);
+        grid.appendChild(card);
+    });
+    area.appendChild(grid);
+}
+
+function renderLabList(list, area) {
+    const wrap = document.createElement('div');
+    wrap.className = 'project-list';
+    const header = document.createElement('div');
+    header.className = 'list-header';
+    header.innerHTML = `<div></div><div>Name</div><div>Description</div><div>Lang</div><div>Stats</div><div>Year</div>`;
+    wrap.appendChild(header);
+    list.forEach(p => {
+        const row = document.createElement('div');
+        row.className = 'list-row';
+        row.innerHTML = `
+            <div class="row-icon" style="opacity:0.7">${TYPE_ICONS[p.type]||TYPE_ICONS.util}</div>
+            <div class="row-name">${p.name}</div>
+            <div class="row-desc">${p.desc||'—'}</div>
+            <div class="row-lang" style="color:${langColor(p.lang)}">${p.lang}</div>
+            <div style="display:flex;align-items:center;gap:8px">
+                <span class="row-stat" style="stroke:var(--yellow)">${SVG_STAR}&nbsp;${p.stars}</span>
+                <span class="row-stat" style="stroke:var(--green)">${SVG_FORK}&nbsp;${p.forks}</span>
+            </div>
+            <div class="row-year">${p.year}</div>`;
+        row.onclick = () => openLabModal(p);
+        wrap.appendChild(row);
+    });
+    area.appendChild(wrap);
+}
+
+
+function getProjectType(repo) {
+    const n=repo.name.toLowerCase(), d=(repo.description||'').toLowerCase();
+    if(n.includes('bot')||d.includes('bot')) return 'bot';
+    if(n.includes('data')||n.includes('pars')) return 'data';
+    if(n.includes('web')||n.includes('react')||n.includes('next')||repo.homepage) return 'web';
+    if(repo.language==='Python'||n.includes('script')) return 'script';
+    return 'util';
+}
+
+async function loadLabRepos() {
+    document.getElementById('project-area').innerHTML = `<div class="loader-msg">Fetching data from <span>GitHub API</span>...</div>`;
+    try {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+        if(!res.ok) throw new Error('GitHub API returned '+res.status);
+        const repos = await res.json();
+
+        labRepos = repos.filter(r=>!r.fork).map(r=>({
+            name: r.name, desc: r.description||'',
+            lang: r.language||'Plain',
+            stars: r.stargazers_count, forks: r.forks_count,
+            type: getProjectType(r),
+            year: new Date(r.updated_at).getFullYear(),
+            updated: r.updated_at, created: r.created_at,
+            url: r.html_url, homepage: r.homepage,
+            topics: r.topics||[], license: r.license?r.license.spdx_id:null,
+            size: r.size, openIssues: r.open_issues_count,
+            defaultBranch: r.default_branch,
+        }));
+
+        document.getElementById('lab-count').textContent = labRepos.length;
+        labLoaded = true;
+
+        const langs = [...new Set(labRepos.map(r=>r.lang).filter(Boolean))].sort();
+        const sel = document.getElementById('f-lang');
+        sel.innerHTML = '<option value="">lang: all</option>';
+        langs.forEach(l=>{const o=document.createElement('option');o.value=l;o.textContent='lang: '+l;sel.appendChild(o);});
+
+        document.getElementById('f-sort').innerHTML = `
+            <option value="updated">sort: recent</option>
+            <option value="stars">sort: stars ★</option>
+            <option value="forks">sort: forks</option>
+            <option value="name">sort: name A–Z</option>
+        `;
+
+        renderCurrentTab();
+    } catch(e) {
+        document.getElementById('project-area').innerHTML = `<div class="loader-msg" style="color:var(--red)">Error: ${e.message}</div>`;
+    }
+}
+
+
+function openFeaturedModal(p) {
+    currentProject = { ...p, _source: 'featured' };
+    document.getElementById('m-title').textContent = p.name;
+
+    const notes = getNotes();
+    const savedNote = notes[p.id] || p.note || '';
+    const techTags = p.tech.map(t=>`<span class="m-tag" style="border-color:${langColor(t)}33;color:${langColor(t)}">${t}</span>`).join('');
+
+    document.getElementById('m-left').innerHTML = `
+        <div>
+            <div class="m-section-label"><span>//</span> description</div>
+            <div class="m-desc">${p.longDesc || p.desc}</div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> tech stack</div>
+            <div class="m-tags">${techTags}<span class="m-tag type">${p.type}</span></div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> timeline</div>
+            <div class="m-timeline">
+                <div class="m-tl-row">${SVG_CAL} &nbsp;Year: <span style="color:var(--blue);margin-left:4px">${p.year}</span></div>
+                ${p.privateCode ? `<div class="m-tl-row" style="color:var(--orange)">${SVG_LOCK.replace('stroke="currentColor"','stroke="#ffa657"').replace(/viewBox="0 0 24 24"/,'viewBox="0 0 24 24" width="11" height="11"')} &nbsp;Source code is private</div>` : ''}
+            </div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> links</div>
+            <div class="m-links">
+                ${p.githubRepo && !p.privateCode ? `<a class="m-link" href="https://github.com/${GITHUB_USERNAME}/${p.githubRepo}" target="_blank">${SVG_GH} GitHub Repository</a>` : ''}
+                ${p.homepage ? `<a class="m-link" href="${p.homepage}" target="_blank">${SVG_LINK} Live Demo</a>` : ''}
+                ${(!p.githubRepo && !p.homepage) ? `<div style="font-size:0.76rem;color:var(--dim)">No public links${p.privateCode ? ' — closed source project. <a href="contact.html" style="color:var(--blue)">Contact me</a> if you want to know more.' : '.'}</div>` : ''}
+            </div>
+        </div>
+    `;
+
+    renderNotePanel(p.id, savedNote, true);
+    openModalOverlay();
+}
+
+
+function openLabModal(p) {
+    currentProject = { ...p, _source: 'lab', id: p.name };
+    document.getElementById('m-title').textContent = p.name;
+
+    const notes = getNotes();
+    const savedNote = notes[p.name] || '';
+    const sizeStr = p.size > 1024 ? (p.size/1024).toFixed(1)+'MB' : p.size+'KB';
+    const topicsHtml = (p.topics||[]).map(t=>`<span class="m-tag">${t}</span>`).join('');
+    const created = new Date(p.created).toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'});
+    const updated = new Date(p.updated).toLocaleDateString('en-GB',{year:'numeric',month:'short',day:'numeric'});
+
+    document.getElementById('m-left').innerHTML = `
+        <div>
+            <div class="m-section-label"><span>//</span> description</div>
+            <div class="m-desc">${p.desc||'No description provided.'}</div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> stats</div>
+            <div class="m-meta-grid">
+                <div class="m-meta-item"><div class="m-meta-val" style="color:var(--yellow)">${p.stars}</div><div class="m-meta-key">Stars</div></div>
+                <div class="m-meta-item"><div class="m-meta-val" style="color:var(--green)">${p.forks}</div><div class="m-meta-key">Forks</div></div>
+                <div class="m-meta-item"><div class="m-meta-val" style="color:var(--blue)">${p.openIssues}</div><div class="m-meta-key">Issues</div></div>
+                <div class="m-meta-item"><div class="m-meta-val" style="font-size:0.82rem;color:var(--dim)">${sizeStr}</div><div class="m-meta-key">Size</div></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> tags</div>
+            <div class="m-tags">
+                <span class="m-tag lang" style="color:${langColor(p.lang)};border-color:${langColor(p.lang)}33">${p.lang}</span>
+                <span class="m-tag type">${p.type}</span>
+                ${p.license?`<span class="m-tag">${p.license}</span>`:''}
+                ${topicsHtml}
+            </div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> timeline</div>
+            <div class="m-timeline">
+                <div class="m-tl-row">${SVG_CAL} &nbsp;Created: ${created}</div>
+                <div class="m-tl-row">${SVG_CAL} &nbsp;Updated: ${updated}</div>
+                <div class="m-tl-row" style="margin-top:2px">Branch: <span style="color:var(--green);margin-left:4px">${p.defaultBranch}</span></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> links</div>
+            <div class="m-links">
+                <a class="m-link" href="${p.url}" target="_blank">${SVG_GH} GitHub</a>
+                ${p.homepage?`<a class="m-link" href="${p.homepage}" target="_blank">${SVG_LINK} Live Site</a>`:''}
+            </div>
+        </div>
+
+        <div>
+            <div class="m-section-label"><span>//</span> recent commits</div>
+            <div class="m-commits" id="m-commits"><span style="color:var(--dim);font-size:0.74rem">Loading...</span></div>
+        </div>
+    `;
+
+    renderNotePanel(p.name, savedNote, false);
+    fetchCommits(p.name);
+    openModalOverlay();
+}
+
+function renderNotePanel(id, savedNote, isFeatured) {
+    const right = document.getElementById('m-right');
+    right.innerHTML = `
+        <div>
+            <div class="note-panel-label"><span>//</span> dev notes</div>
+            <div id="note-view">
+                ${savedNote
+                    ? `<div class="note-display" id="note-text">${savedNote.split('\n').map(l=>`<p>${l}</p>`).join('')}</div>
+                       <div style="margin-top:10px;display:flex;gap:6px;">
+                           <button class="note-btn ghost" onclick="showNoteEditor('${id}', '${isFeatured}')">[ ✎ edit ]</button>
+                       </div>`
+                    : `<p class="note-empty-msg">No notes yet. Write your thoughts about this project — what you learned, what challenges you hit, what you'd do differently.</p>
+                       <div style="margin-top:10px">
+                           <button class="note-btn primary" onclick="showNoteEditor('${id}', '${isFeatured}')">[ + add note ]</button>
+                       </div>`
+                }
+            </div>
+            <div id="note-editor" style="display:none">
+                <textarea class="note-textarea" id="note-ta" placeholder="Write about this project...">${savedNote}</textarea>
+                <div class="note-btn-row">
+                    <button class="note-btn primary" onclick="saveCurrentNote('${id}', '${isFeatured}')">[ ✓ save ]</button>
+                    <button class="note-btn ghost" onclick="hideNoteEditor()">[ cancel ]</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function showNoteEditor(id, isFeatured) {
+    const notes = getNotes();
+    const saved = notes[id] || (isFeatured==='true' && currentProject ? currentProject.note||'' : '');
+    document.getElementById('note-view').style.display = 'none';
+    document.getElementById('note-editor').style.display = 'block';
+    document.getElementById('note-ta').value = saved;
+}
+
+function hideNoteEditor() {
+    document.getElementById('note-view').style.display = 'block';
+    document.getElementById('note-editor').style.display = 'none';
+}
+
+function saveCurrentNote(id, isFeatured) {
+    const text = document.getElementById('note-ta').value.trim();
+    saveNote(id, text);
+    if(isFeatured==='true') {
+        const p = featuredProjects.find(f=>f.id===id);
+        if(p) renderNotePanel(id, text, true);
+    } else {
+        const p = labRepos.find(r=>r.name===id);
+        if(p) renderNotePanel(id, text, false);
+    }
+}
+
+async function fetchCommits(repoName) {
+    try {
+        const res = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}/commits?per_page=5`);
+        if(!res.ok) throw new Error();
+        const commits = await res.json();
+        const el = document.getElementById('m-commits');
+        if(!el) return;
+        if(!commits.length){ el.innerHTML=`<span style="color:var(--dim);font-size:0.73rem">No commits found.</span>`; return; }
+        el.innerHTML = commits.map(c=>{
+            const d = new Date(c.commit.author.date).toLocaleDateString('en-GB',{month:'short',day:'numeric'});
+            const sha = c.sha.substring(0,7);
+            const msg = c.commit.message.split('\n')[0].substring(0,60);
+            return `<div class="commit-row">
+                <span class="commit-sha">${sha}</span>
+                <span class="commit-msg">${msg}</span>
+                <span class="commit-date">${d}</span>
+            </div>`;
+        }).join('');
+    } catch {
+        const el = document.getElementById('m-commits');
+        if(el) el.innerHTML = '<span style="color:var(--dim);font-size:0.73rem">Could not load commits.</span>';
+    }
+}
+
+function openModalOverlay() {
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+    currentProject = null;
+}
+document.getElementById('modal-overlay').addEventListener('click', e => {
+    if(e.target === document.getElementById('modal-overlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+initFeatured();
+</script>
+</body>
+</html>

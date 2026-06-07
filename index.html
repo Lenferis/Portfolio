@@ -10,6 +10,24 @@
 </head>
 <body>
 
+<div class="bg-scene">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-title">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span id="modal-title-text">project</span>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal()">[ ✕ close ]</button>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
 
 <nav class="navbar">
     <div class="nav-wrapper">
@@ -47,10 +65,10 @@
         <h1>Portfolio</h1>
         <p class="subtitle">[ system.fullstack_developer ]</p>
         <div class="stats-grid">
-            <div class="stat-card"><span class="stat-value">24</span><span class="stat-label">Repos</span></div>
-            <div class="stat-card"><span class="stat-value">1.2k</span><span class="stat-label">Commits</span></div>
+            <div class="stat-card"><span class="stat-value" id="stat-repos">24</span><span class="stat-label">Repos</span></div>
+            <div class="stat-card"><span class="stat-value" id="stat-commits">1.2k</span><span class="stat-label">Commits</span></div>
             <div class="stat-card"><span class="stat-value">∞</span><span class="stat-label">Coffee</span></div>
-            <div class="stat-card"><span class="stat-value">3</span><span class="stat-label">Years</span></div>
+            <div class="stat-card"><span class="stat-value" id="stat-years">3</span><span class="stat-label">Years</span></div>
         </div>
         <div class="btn-group">
             <a href="github.html" class="btn btn-blue">
@@ -67,43 +85,41 @@
                 </svg>
                 Tech Stack
             </a>
-            <a href="#" class="btn btn-outline">
+            <a href="contact.html" class="btn btn-outline">
                 <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Contact
             </a>
         </div>
     </header>
 
-        <section id="about-me">
-            <h2><span>//</span> about me</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-title">[ 01. Bio ]</div>
-                    <p class="about-text">
-                        I’m a full‑stack developer who believes clean code is a craft.
-                        Currently diving deep into Web and Rust while building
-                        tools that make other developers smile. Open source enthusiast,
-                        terminal dweller, and relentless builder of side projects.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <div class="about-title">[ 02. Interests ]</div>
-                    <ul class="about-list">
-                        <li><span class="k">Open Source</span><span class="v">Contributing to tools that matter</span></li>
-                        <li><span class="k">Music</span><span class="v">Alternative rock, rap, lo‑fi & synthwave while coding</span></li>
-                        <li><span class="k">Gaming</span><span class="v">Story-driven, shooters, aim trainers</span></li>
-                        <li><span class="k">Photography</span><span class="v">Street & monochrome</span></li>
-                    </ul>
-                </div>
+    <section id="about-me">
+        <h2><span>//</span> about me</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-title">[ 01. Bio ]</div>
+                <p class="about-text">
+                    I’m a full‑stack developer who believes clean code is a craft.
+                    Currently diving deep into Web and Rust while building
+                    tools that make other developers smile. Open source enthusiast,
+                    terminal dweller, and relentless builder of side projects.
+                </p>
             </div>
-        </section>
+            <div class="about-card">
+                <div class="about-title">[ 02. Interests ]</div>
+                <ul class="about-list">
+                    <li><span class="k">Open Source</span><span class="v">Contributing to tools that matter</span></li>
+                    <li><span class="k">Music</span><span class="v">Alternative rock, rap, lo‑fi & synthwave while coding</span></li>
+                    <li><span class="k">Gaming</span><span class="v">Story-driven, shooters, aim trainers</span></li>
+                    <li><span class="k">Photography</span><span class="v">Street & monochrome</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section id="projects">
         <h2><span>//</span> featured projects</h2>
-        <div class="project-item">
-            <a href="#"><span>C</span>odeSprint</a>
-            <span class="project-desc">Train your typing speed with real code snippets.</span>
-            <div class="tag-row"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">API</span></div>
+        <div id="featured-projects-list">
+            <p style="color:var(--dim);font-size:0.8rem;">Loading featured projects...</p>
         </div>
         <div style="margin-top:14px">
             <a href="project.html" class="btn btn-outline" style="font-size:0.76rem">
@@ -129,7 +145,6 @@
                 <div class="setup-title">[ 02. Software ]</div>
                 <ul class="setup-list">
                     <li><span class="k">Editor</span><span class="v">VS Code</span></li>
-
                     <li><span class="k">Notes</span><span class="v">Obsidian (Second Brain)</span></li>
                 </ul>
             </div>
@@ -140,5 +155,150 @@
         <code>01001001 00100000 01110111 01101001 01101100 01101100 00100000 01100001 01100011 01101000 01101001 01100101 01110110 01100101 00100000 01100101 01110110 01100101 01110010 01111001 01110100 01101000 01101001 01101110 01100111 00001010 // Compiled by Lenfer 2026</code>
     </footer>
 </div>
+
+<script>
+function openModal(project) {
+    document.getElementById('modal-title-text').textContent = project.name;
+    const body = document.getElementById('modal-body');
+    const techTags = project.tech.map(t => `<span class="m-tag" style="color:var(--blue)">${t}</span>`).join('');
+    const typeTag = `<span class="m-tag type">${project.type}</span>`;
+    const privateIcon = project.privateCode
+        ? `<span class="m-tl-row" style="color:var(--orange)">
+            <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="#ffa657" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            &nbsp;Source code is private
+           </span>` : '';
+
+    body.innerHTML = `
+        <div>
+            <div class="m-section-label"><span>//</span> description</div>
+            <div class="m-desc">${project.longDesc || project.desc}</div>
+        </div>
+        <div>
+            <div class="m-section-label"><span>//</span> tech stack</div>
+            <div class="m-tags">${techTags} ${typeTag}</div>
+        </div>
+        <div>
+            <div class="m-section-label"><span>//</span> timeline</div>
+            <div class="m-timeline">
+                <div class="m-tl-row">
+                    <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><rect x="1" y="2.5" width="12" height="10" rx="1.5"/><path d="M4 1v2M10 1v2M1 6h12"/></svg>
+                    &nbsp;Year: <span style="color:var(--blue);margin-left:4px">${project.year}</span>
+                </div>
+                ${privateIcon}
+            </div>
+        </div>
+        <div>
+            <div class="m-section-label"><span>//</span> links</div>
+            <div class="m-links">
+                ${project.githubRepo && !project.privateCode ? `<a class="m-link" href="https://github.com/${GITHUB_USERNAME}/${project.githubRepo}" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    GitHub Repository
+                </a>` : ''}
+                ${project.homepage ? `<a class="m-link" href="${project.homepage}" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Live Demo
+                </a>` : ''}
+                ${(!project.githubRepo && !project.homepage) ? `<p style="color:var(--dim);font-size:0.78rem;">No public links${project.privateCode ? ' — closed source project.' : '.'}</p>` : ''}
+            </div>
+        </div>
+    `;
+
+    document.getElementById('modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+});
+
+const GITHUB_USERNAME = 'Lenferis';
+async function loadFeaturedProjects() {
+    const container = document.getElementById('featured-projects-list');
+    try {
+        const res = await fetch('content/projects.json');
+        if (!res.ok) throw new Error('Failed to load projects data');
+        const allProjects = await res.json();
+        const featured = allProjects.filter(p => p.featured).slice(0, 3);
+        if (featured.length === 0) {
+            container.innerHTML = '<p style="color:var(--dim);">No featured projects yet.</p>';
+            return;
+        }
+        container.innerHTML = featured.map(project => `
+            <div class="project-item" style="cursor:pointer;" onclick="openModal(${JSON.stringify(project).replace(/"/g, '&quot;')})">
+                <a style="text-decoration:none;color:inherit;">
+                    <span style="color:var(--blue)">${project.name.charAt(0)}</span>${project.name.slice(1)}
+                </a>
+                <span class="project-desc">${project.desc}</span>
+                <div class="tag-row">${project.tech.slice(0,3).map(t => `<span class="tag">${t}</span>`).join('')}</div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = '<p style="color:var(--red);">Could not load projects.</p>';
+    }
+}
+
+async function loadGitHubStats() {
+    const reposEl = document.getElementById('stat-repos');
+    const commitsEl = document.getElementById('stat-commits');
+    const yearsEl = document.getElementById('stat-years');
+
+    [reposEl, commitsEl, yearsEl].forEach(el => {
+        el.textContent = '…';
+        el.style.color = 'var(--dim)';
+    });
+
+    try {
+        const userRes = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        if (!userRes.ok) throw new Error('User fetch failed');
+        const userData = await userRes.json();
+
+        reposEl.textContent = userData.public_repos;
+        reposEl.style.color = ''; 
+
+        const createdAt = new Date(userData.created_at);
+        const now = new Date();
+        const diffYears = Math.floor((now - createdAt) / (1000 * 60 * 60 * 24 * 365.25));
+        yearsEl.textContent = diffYears;
+        yearsEl.style.color = '';
+
+        const commitsRes = await fetch(`https://api.github.com/search/commits?q=author:${GITHUB_USERNAME}`, {
+            headers: {
+                'Accept': 'application/vnd.github.cloak-preview+json' 
+            }
+        });
+        
+        if (commitsRes.ok) {
+            const commitsData = await commitsRes.json();
+            const totalCommits = commitsData.total_count;
+            
+            commitsEl.textContent = totalCommits >= 1000 ? (totalCommits / 1000).toFixed(1) + 'k' : totalCommits;
+        } else {
+            console.warn('Rate limit hit for Search API');
+            commitsEl.textContent = '—';
+        }
+        commitsEl.style.color = '';
+
+    } catch (err) {
+        console.warn('GitHub stats error:', err);
+        reposEl.textContent = '—';
+        commitsEl.textContent = '—';
+        yearsEl.textContent = '—';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadFeaturedProjects();
+    loadGitHubStats();
+});
+</script>
 </body>
 </html>

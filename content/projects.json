@@ -1,0 +1,58 @@
+[
+    {
+        "id": "codesprint",
+        "name": "CodeSprint",
+        "desc": "Train your typing speed with real code snippets pulled from popular open-source projects. Supports multiple languages, difficulty tiers, and leaderboards.",
+        "longDesc": "CodeSprint was born out of frustration with typing trainers that use only English prose. As a developer, your fingers should fly on *code* — brackets, semicolons, snake_case. The app loads real code from GitHub gists, tracks WPM and accuracy per language, and adapts difficulty based on your rolling 7-day average.",
+        "tech": ["TypeScript", "React", "Node.js", "PostgreSQL", "Prisma"],
+        "type": "web",
+        "year": 2025,
+        "githubRepo": null,
+        "homepage": null,
+        "privateCode": false,
+        "featured": true,
+        "note": "Built as a college coursework project. Learned a lot about WebSocket real-time scoring and caching strategies for the leaderboard."
+    },
+    {
+        "id": "portfolio",
+        "name": "This Portfolio",
+        "desc": "Monorepo for this very site — built without any framework, just vanilla HTML/CSS/JS and a Tokyo Night obsession.",
+        "longDesc": "A deliberate choice: no React, no Vite, no npm install. Just files. Each page is self-contained. The \"stack\" is intentionally minimal so the site loads in under 0.5s on a 3G connection. Dark theme with a code-editor aesthetic because — let's be honest — that's how I see the world.",
+        "tech": ["HTML", "CSS", "JavaScript"],
+        "type": "web",
+        "year": 2026,
+        "githubRepo": null,
+        "homepage": null,
+        "privateCode": false,
+        "featured": true,
+        "note": "The CSS variables system made theming trivial. Every page shares one global.css with the color palette and font stack, then adds a page-specific file."
+    },
+        {
+        "id": "memento-mori",
+        "name": "Memento Mori",
+        "desc": "A visual life calendar that turns your weeks into dots — see your past, current, and future weeks at a glance. Reminder that time is finite.",
+        "longDesc": "A small project inspired by the Memento Mori concept. Enter your birth date and estimated lifespan, and the app shows your life broken down into weeks: golden dots for weeks already lived, a glowing dot for the current week, and dark dots for the future. It calculates days lived, days remaining, and days until your next birthday. Supports English, Ukrainian, and Russian. No frameworks, no dependencies — just HTML, CSS, and vanilla JavaScript. Built as a personal tool that unexpectedly resonated with others.",
+        "tech": ["HTML", "CSS", "JavaScript"],
+        "type": "web",
+        "year": 2025,
+        "githubRepo": "Memento-Mori",
+        "homepage": "https://lenferis.github.io/Memento-Mori/",
+        "privateCode": false,
+        "featured": true,
+        "note": "The idea came from organizing Obsidian notes and a YouTube video about dataviewjs. Seeing your life as dots changes something. The multilingual setup (i18n) was an interesting challenge — switching languages without reloading."
+    },
+    {
+        "id": "anchor-cli",
+        "name": "Anchor CLI ⚓",
+        "desc": "A context-freeze utility that saves your mental and technical workspace so you can pause and resume work without losing your train of thought.",
+        "longDesc": "Anchor solves the problem of expensive context switching. When you're deep in a task, a single `anchor freeze` command saves your current directory, Git branch, dirty files, running processes (via SIGSTOP/SIGCONT), and most importantly, your own thoughts (a mental note). When you return, `anchor thaw` restores the environment and reminds you exactly what you were doing. Designed as a lightweight CLI without external dependencies, storing state locally in JSON files. Future plans include automation hooks (`.anchor.yaml`), terminal buffer saving, and window manager integration. The philosophy: the computer should remember not just files, but the human's mental state.",
+        "tech": ["TypeScript", "Node.js", "Bun", "Go", "Rust"],
+        "type": "util",
+        "year": 2026,
+        "githubRepo": null,
+        "homepage": null,
+        "privateCode": true,
+        "featured": true,
+        "note": "Currently in the design phase. The architecture supports two potential implementations: a rapid TypeScript/Bun prototype or a compiled Go/Rust binary for zero-dependency distribution. The hardest part will be cross-platform process suspension — SIGSTOP is POSIX-only, Windows needs a different approach."
+    }
+]

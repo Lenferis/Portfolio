@@ -1,116 +1,117 @@
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    padding: 0 32px;
-    background: rgba(10,13,18,0.72);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--border);
-    height: 52px; font-size: 0.82rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  background: rgba(10, 13, 18, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  height: 52px;
+  font-size: 0.82rem;
 }
 .nav-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center; 
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-.nav-item { 
-    display: flex;
-    align-items: center; 
-    text-decoration: none; 
-    color: var(--dim); 
-    padding: 0 14px; 
-    height: 52px; 
-    transition: color 0.2s; 
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dim);
+  padding: 0 14px;
+  height: 52px;
+  transition: color 0.2s;
 }
-.nav-item:hover { 
-    color: var(--blue); 
+.nav-item:hover {
+  color: var(--blue);
 }
-.nav-item span { 
-    color: var(--blue); 
+.nav-item span {
+  color: var(--blue);
 }
-.dropdown { 
-    display: none; 
-    list-style: none; 
-    position: absolute; 
-    top: 51px; 
-    left: 0; 
-    background: rgba(10,13,18); 
-    border: 1px solid var(--border); 
-    border-radius: 2px;
-    border-top: none; 
-    min-width: 160px; 
-    padding: 6px 0; 
-    z-index: 200; 
+.dropdown {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  background: rgba(10, 13, 18);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  border-top: none;
+  min-width: 160px;
+  padding: 6px 0;
+  z-index: 200;
 }
-.nav-wrapper:hover .dropdown { 
-    display: block; 
+.nav-wrapper:hover .dropdown {
+  display: block;
 }
-.dropdown li a { 
-    display: block; 
-    padding: 7px 16px; 
-    text-decoration: none; 
-    color: var(--dim); 
-    font-size: 0.78rem; 
-    transition: 0.15s; 
+.dropdown li a {
+  display: block;
+  padding: 7px 16px;
+  text-decoration: none;
+  color: var(--dim);
+  font-size: 0.78rem;
+  transition: 0.15s;
 }
-.dropdown li a:hover { 
-    color: var(--blue); 
-    background: rgba(0,240,255,0.04); 
+.dropdown li a:hover {
+  color: var(--blue);
+  background: rgba(0, 240, 255, 0.04);
 }
-.dropdown li a span { 
-    color: var(--blue); 
+.dropdown li a span {
+  color: var(--blue);
 }
-.nav-sep { 
-    color: var(--border); 
-    padding: 0 2px; 
-    user-select: none; 
+.nav-sep {
+  color: var(--border);
+  padding: 0 2px;
+  user-select: none;
 }
-.social-dock { 
-    display: flex; 
-    align-items: center; 
-    gap: 4px; 
-    margin-left: auto; 
+.social-dock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
 }
-.social-link { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 32px; 
-    height: 32px; 
-    border-radius: 6px; 
-    border: 1px solid transparent; 
-    color: var(--dim); 
-    text-decoration: none; 
-    transition: 0.2s; 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  color: var(--dim);
+  text-decoration: none;
+  transition: 0.2s;
 }
-.social-link svg { 
-    width: 15px; 
-    height: 15px; 
-    fill: none; 
-    stroke: currentColor; 
-    stroke-width: 1.8; 
-    stroke-linecap: round; 
-    stroke-linejoin: round; 
+.social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-.social-link:hover { 
-    color: var(--blue); 
-    border-color: rgba(0,240,255,0.3); 
-    background: rgba(0,240,255,0.04); 
+.social-link:hover {
+  color: var(--blue);
+  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(0, 240, 255, 0.04);
 }
-.status-tag { 
-    display: flex; 
-    align-items: center; 
-    gap: 7px; 
-    font-size: 0.72rem; 
-    color: var(--dim); 
-    border: 1px solid var(--border); 
-    border-radius: 20px; 
-    padding: 3px 10px; 
-    margin-left: 16px; 
-    white-space: nowrap; 
+.status-tag {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  color: var(--dim);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-left: 16px;
+  white-space: nowrap;
 }
 
 @media (max-width: 440px) {
